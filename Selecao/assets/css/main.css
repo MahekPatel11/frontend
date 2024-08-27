@@ -2614,3 +2614,125 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* login */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 175px 0; /* Increased padding for more height */
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px; /* Increased padding for a larger container */
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .btn-primary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #ef6603;
+  border: none;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Added transition for smooth effect */
+}
+
+.login-card .btn-primary:hover {
+  background-color: #fff;
+  color: #ef6603; /* Text color to match the original button color */
+  border: 2px solid #ef6603; /* Border color to match the original button color */
+}
+
+
+    .login-card h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .login-card .form-control {
+      border-radius: 5px;
+      padding: 10px;
+      border-bottom: 2px solid #ef6603;
+    }
+
+    .login-card .creative-link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #007bff;
+    }
+
+    .login-card .creative-link a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-card .form-label {
+    font-weight: bold; /* Bolded the text */
+  }
+
+/* signup */
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 128px 0; /* Increased padding for more height */
+  background-color: #f8f9fa;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px; /* Increased padding for a larger container */
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-card h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.signup-card .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  border-bottom: 2px solid #ef6603;
+}
+
+.signup-card .btn-primary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #ef6603;
+  border: none;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Added transition for smooth effect */
+}
+
+.signup-card .btn-primary:hover {
+  background-color: #fff;
+  color: #ef6603; /* Text color to match the original button color */
+  border: 2px solid #ef6603; /* Border color to match the original button color */
+}
+
+.signup-card .form-label {
+  font-weight: bold; /* Bolded the text */
+}
+
+.signup-card .creative-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff;
+}
+
+.signup-card .creative-link a {
+  text-decoration: none;
+  font-weight: 600;
+}
