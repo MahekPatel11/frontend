@@ -818,7 +818,7 @@ section,
   }
 }
 
-.hero .hero-waves {
+/* .hero .hero-waves {
   display: block;
   width: 100%;
   height: 60px;
@@ -843,7 +843,7 @@ section,
   animation: move-forever3 6s linear infinite;
   animation-delay: -2s;
   fill: var(--default-color);
-} 
+}  */
 
 @keyframes move-forever1 {
   0% {
