@@ -7,6 +7,76 @@
   <title>Index - Selecao Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <style>
+    /* Basic styles for the modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for better contrast */
+    }
+
+    .modal-content {
+      background-color: #ffffff; /* White background for modal content */
+      margin: 15% auto; /* Center the modal */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Adjust width as needed */
+      border-radius: 8px; /* Optional: rounded corners for a modern look */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+    }
+
+    .modal-header, .modal-footer {
+      background-color: #007bff; /* Blue background for header and footer */
+      color: #ffffff; /* White text color */
+      padding: 10px 20px;
+      border-radius: 8px 8px 0 0; /* Rounded corners on the top */
+    }
+
+    .modal-header {
+      border-bottom: 1px solid #0056b3; /* Slightly darker blue for the bottom border */
+    }
+
+    .modal-footer {
+      border-radius: 0 0 8px 8px; /* Rounded corners on the bottom */
+      text-align: right;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .close {
+      color: #ffffff; /* White color for the close button */
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #dddddd; /* Slightly lighter color on hover/focus */
+    }
+
+    .modal-footer button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #0056b3; /* Darker blue background for the OK button */
+      color: #ffffff; /* White text color */
+      border-radius: 5px; /* Rounded corners for the button */
+    }
+
+    .modal-footer button:hover {
+      background-color: #004494; /* Even darker blue on hover */
+    }
+  </style>
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -52,10 +122,87 @@
         <ul>
           <div class="container-fluid">
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
+              <button class="btn btn-outline-success" type="button" id="searchButton">Search</button>
             </form>
           </div>
+        
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Choose an Option</h2>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <input type="radio" id="option1" name="options" value="option 1">
+                  <label for="option1">Query based on exact Make/Model of a Product</label><br>
+                  <input type="radio" id="option2" name="options" value="Option 2">
+                  <label for="option2">Query based on Most Relevant Specifications of a Product:</label><br>
+                  <input type="radio" id="option3" name="options" value="Option 3">
+                  <label for="option3">Query based on Basic Requirements of a Service: </label><br>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="okButton" class="btn btn-primary">OK</button>
+              </div>
+            </div>
+          </div>
+        
+          <script>
+            // Get modal element
+            var modal = document.getElementById("myModal");
+        
+            // Get open modal button
+            var openModalButton = document.querySelector('form[role="search"] button');
+        
+            // Get close button
+            var closeButton = document.getElementsByClassName("close")[0];
+        
+            // Get OK button
+            var okButton = document.getElementById("okButton");
+        
+            // When the user clicks the search button, open the modal 
+            openModalButton.onclick = function(event) {
+              event.preventDefault(); // Prevent the form from submitting
+              var searchValue = document.getElementById('searchBox').value.trim();
+              
+              if (searchValue) { // Only open the modal if there's something in the search box
+                modal.style.display = "block";
+              } else {
+                alert("Please enter a search term.");
+              }
+            }
+        
+            // When the user clicks on the close button, close the modal
+            closeButton.onclick = function() {
+              modal.style.display = "none";
+            }
+        
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        
+            // Handle the OK button click event
+            okButton.onclick = function() {
+              // Capture the selected radio button value
+              var selectedOption = document.querySelector('input[name="options"]:checked');
+              
+              if (selectedOption) {
+                alert('You selected: ' + selectedOption.value);
+              } else {
+                alert('Please select an option.');
+              }
+        
+              // Close the modal
+              modal.style.display = "none";
+            }
+          </script>
+
           <li><a href="#hero" class="active">Home</a></li>
           <!-- <li><a href="#about">About</a></li> -->
           <!-- <li><a href="#services">Services</a></li> -->
