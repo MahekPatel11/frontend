@@ -2521,7 +2521,6 @@ section,
 .search-widget form:is(:focus-within) {
   border-color: var(--accent-color);
 }
-
 .categories-widget ul {
   list-style: none;
   padding: 0;
