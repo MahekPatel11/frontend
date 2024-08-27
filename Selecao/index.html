@@ -31,15 +31,16 @@
   }
 
   .modal-header1, .modal-footer1 {
-    background-color: #d68432; /* Background color for header and footer */
+    /* background-color: #383a46; Background color for header and footer */
     color: #ffffff; /* White text color */
     padding: 10px 20px;
     border-radius: 30px; /* Rounded corners for header and footer */
   }
 
-  /* .modal-header1 {
-    border-bottom: 1px solid #0056b3; /* Border color for the bottom of the header *
-  } */
+  .modal-header1 {
+    /* border-bottom: 1px solid #0056b3; /* Border color for the bottom of the header */
+    background-color: #383a46; *
+  }
 
   .modal-footer1 {
     border-radius: 30 0 30px 30px; /* Rounded corners on the bottom */
@@ -66,13 +67,13 @@
   .modal-footer1 button {
     padding: 10px 20px;
     border: none;
-    background-color: #0056b3; /* Darker blue background for the OK button */
+    background-color: #ef6603; /* Darker blue background for the OK button */
     color: #ffffff; /* White text color */
     border-radius: 30px; /* Rounded corners for the button */
   }
 
   .modal-footer1 button:hover {
-    background-color: #004494; /* Even darker blue on hover */
+    background-color: #ef6603; /* Even darker blue on hover */
   }
   </style>
 
@@ -130,13 +131,12 @@
           <div id="myModal" class="modal1">
             <div class="modal-content1">
               <div class="modal-header1">
-                <span class="close">&times;</span>
-                <h2>search as per your inputs:</h2>
+                <span class="close">&times;</span><h2 style="text-align: center;">Search As Per Your Inputs:</h2>
               </div>
               <div class="modal-body1">
                 <div class="mb-3">
                   <input type="radio" id="option1" name="options" value="option 1">
-                  <label for="option1">Query based on exact Make/Model of a Product</label><br>
+                  <label for="option1">Query based on exact Make/Model of a Product:</label><br>
                   <input type="radio" id="option2" name="options" value="Option 2">
                   <label for="option2">Query based on Most Relevant Specifications of a Product:</label><br>
                   <input type="radio" id="option3" name="options" value="Option 3">
