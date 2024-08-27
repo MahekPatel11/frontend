@@ -22,35 +22,6 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const searchInput = document.querySelector('input.form-control');
-    const sections = document.querySelectorAll('.portfolio-section');
-  
-    searchInput.addEventListener('input', function () {
-      const query = searchInput.value.toLowerCase();
-  
-      let found = false;
-      sections.forEach(section => {
-        const sectionTitle = section.querySelector('h2').textContent.toLowerCase();
-        if (sectionTitle.includes(query)) {
-          section.style.display = 'block';
-          if (!found) {
-            section.scrollIntoView({ behavior: 'smooth' }); // Scroll to the section
-            found = true;
-          }
-        } else {
-          section.style.display = 'none';
-        }
-      });
-  
-      if (!found) {
-        // Optionally handle case when no matching section is found
-        // For example, you can scroll to the top or show a "no results" message
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  });
-  
 
   /**
    * Mobile nav toggle
