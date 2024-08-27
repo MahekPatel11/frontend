@@ -799,7 +799,7 @@ section,
 
 @media (min-width: 1024px) {
   .hero p {
-    max-width: 60%;
+    max-width: 30%;
   }
 
   .hero .carousel-control-prev,
