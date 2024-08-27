@@ -163,7 +163,7 @@ h6 {
 
 .header .logo h1 {
   font-size: 30px;
-  margin: 0;
+  margin-left: 30px;
   font-weight: 700;
   color: var(--heading-color);
 }
@@ -1169,6 +1169,7 @@ section,
   z-index: 3;
   transition: all ease-in-out 0.5s;
   background: color-mix(in srgb, var(--surface-color), transparent 10%);
+  border: 1px solid black;
   padding: 15px;
 }
 
