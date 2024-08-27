@@ -297,11 +297,15 @@ h6 {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+    z-index: 10000; /* Ensures the toggle button stays on top */
+    position: fixed; /* Fixed positioning to remain visible */
+    top: 15px;
+    right: 15px;
   }
 
   .navmenu {
     padding: 0;
-    z-index: 9997;
+    z-index: 9999;
   }
 
   .navmenu ul {
@@ -394,12 +398,12 @@ h6 {
 
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
-    position: absolute;
+    position: fixed;
     font-size: 32px;
     top: 15px;
     right: 15px;
     margin-right: 0;
-    z-index: 9999;
+    z-index: 10001;
   }
 
   .mobile-nav-active .navmenu {
@@ -408,6 +412,7 @@ h6 {
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
+    z-index: 10000;
   }
 
   .mobile-nav-active .navmenu>ul {
