@@ -2741,3 +2741,72 @@ section,
   text-decoration: none;
   font-weight: 600;
 }
+
+/* popup */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for better contrast */
+}
+
+.modal-content1 {
+  background-color: #ffffff; /* White background for modal content */
+  margin: 15% auto; /* Center the modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Width adjusted to 60% */
+  border-radius: 30px; /* Rounded corners for the modal content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.modal-header1, .modal-footer1 {
+  /* background-color: #383a46; Background color for header and footer */
+  color: #ffffff; /* White text color */
+  padding: 10px 20px;
+  border-radius: 30px; /* Rounded corners for header and footer */
+}
+
+.modal-header1 {
+  /* border-bottom: 1px solid #0056b3; /* Border color for the bottom of the header */
+  background-color: #383a46; 
+}
+
+.modal-footer1 {
+  border-radius: 30 0 30px 30px; /* Rounded corners on the bottom */
+  text-align: right;
+}
+
+.modal-body1 {
+  padding: 20px;
+}
+
+.close1 {
+  color: #ffffff; /* White color for the close button */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #dddddd; /* Slightly lighter color on hover/focus */
+}
+
+.modal-footer1 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ef6603; /* Darker blue background for the OK button */
+  color: #ffffff; /* White text color */
+  border-radius: 30px; /* Rounded corners for the button */
+}
+
+.modal-footer1 button:hover {
+  background-color: #ef6603; /* Even darker blue on hover */
+}
