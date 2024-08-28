@@ -145,12 +145,15 @@ h6 {
 .header {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
-  color: var(--default-color);
+  color: var(--heading-color);
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  text-shadow: 1px 1px 2px #000; /* Single, subtle black outline */
 }
+
+
 
 .header .logo {
   line-height: 1;
@@ -446,6 +449,7 @@ input.form-control {
   border-radius: 50px;
   transition: 0.3s;
   margin-right: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Input focus styling */
@@ -465,7 +469,11 @@ button.btn-outline-success {
   border-radius: 50px;
   transition: 0.3s;
   background: transparent;
+  text-shadow: 1px 1px 2px #000; /* Adds a subtle text outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Adds a light blur effect */
 }
+
+
 
 /* Button hover styling */
 button.btn-outline-success:hover,
@@ -2663,7 +2671,7 @@ section,
     .login-card .form-control {
       border-radius: 5px;
       padding: 10px;
-      border-bottom: 2px solid #ef6603;
+      /* border-bottom: 2px solid #ef6603; */
     }
 
     .login-card .creative-link {
@@ -2708,7 +2716,7 @@ section,
 .signup-card .form-control {
   border-radius: 5px;
   padding: 10px;
-  border-bottom: 2px solid #ef6603;
+  /* border-bottom: 2px solid #ef6603; */
 }
 
 .signup-card .btn-primary {
